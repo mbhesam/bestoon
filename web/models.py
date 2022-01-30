@@ -6,7 +6,7 @@ class Expense(models.Model):
     date = models.DateTimeField()
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     def __unicode__(self):
-        return self.text
+        return f"{self.date}---{self.amount}"
 
 class Income(models.Model):
     text = models.CharField(max_length=255)
@@ -14,4 +14,4 @@ class Income(models.Model):
     date = models.DateTimeField()
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     def __unicode__(self):
-        return self.text
+        return f"{self.date}---{self.amount}"
