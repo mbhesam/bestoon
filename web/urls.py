@@ -5,5 +5,6 @@ urlpatterns = [
     path("submit/expense" , views.submit_expense ),
     path("submit/income", views.submit_income),
     path("register/" ,views.register),
+    path('',views.index),
 
 ]
